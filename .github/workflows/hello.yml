@@ -1,0 +1,22 @@
+name: Hello World Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print a greeting
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Show today's date
+        run: date
+
+      - name: Show Python version
+        run: python --version
+
+      - name: List files
+        run: ls -la
